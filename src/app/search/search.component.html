@@ -1,0 +1,8 @@
+<div class="search__wrapper">
+  <h3>Search weather report:</h3>
+  <p>Please enter a city name and hit enter to search</p>
+
+  <input type="text" class="search__input" placeholder="Enter city name" (keyup.enter)="goToResults(searchInput.value)" #searchInput />
+
+  <!--<button class="search__button" (click)="goToResults(searchInput.value)">Load results</button>-->
+</div>

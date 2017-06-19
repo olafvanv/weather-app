@@ -1,0 +1,31 @@
+.search__input{
+    width:75%;
+    box-sizing: border-box;
+    margin:20px 0;
+    padding:0 5px;
+    height:35px;
+    float:left;
+    border:1px solid #dcdcdc;
+}
+.search__button{
+    display:block;
+    box-sizing: border-box;
+    width:25%;
+    height:35px;
+    margin:20px 0;
+    float:left;
+    border:0;
+    color:#fff;
+    background-color:#2fcb53;
+    transition:.1s ease-in-out;
+}
+.search__button:hover{
+    cursor:pointer;
+    background-color:#279f43;
+}
+.search__button:active{
+    transform:scale(0.95);
+}
+.search__input:focus, .search__button:focus{
+    outline-width:0;
+}

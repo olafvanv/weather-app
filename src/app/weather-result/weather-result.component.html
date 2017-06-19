@@ -1,0 +1,51 @@
+<div class="results" *ngIf="!loading && weather != {}">
+  <div class="results__head">
+    <div class="row">
+
+      <div class="col-4 head-left">
+        <h1>Current conditions</h1>
+        <div class="stick-to-bottom">
+          <span class="api-ref"><a href="http://www.openweathermap.org" target="_blank">openweathermap.org</a></span>
+        </div>
+      </div>
+
+      <div class="col-4 weather-icon">
+        <img src="assets/img/weather-icons/white/{{weather?.weather[0].icon}}.png" *ngIf="weather" />
+      </div>
+
+      <div class="col-4 head-right">
+        <h3>{{weather?.name | uppercase}}, {{weather?.sys.country}}</h3>
+        <br>
+        <h4>{{weather?.weather[0].main}}</h4>
+        <br>
+        <h3>{{weather?.main.temp | number:'1.0-0'}} °C</h3>
+      </div>
+
+    </div>
+  </div>
+
+  <div class="results__forecast">
+    <div class="row">
+      <div class="col-3 forecast today">
+        <div class="row">
+          <div class="col-6">
+            <h1>{{weather?.main.temp |number:'1.0-0'}}°</h1>
+            <h4>{{date | date:'MMMM dd'}}</h4>
+          </div>
+          <div class="col-6">
+            <img src="assets/img/weather-icons/grey/{{weather?.weather[0].icon}}.png" *ngIf="weather" />
+          </div>
+        </div>
+      </div>
+      <div class="col-3 forecast future">
+      </div>
+      <div class="col-3 forecast future">
+      </div>
+    </div>
+  </div>
+
+</div>
+
+<div class="loading" *ngIf="loading">
+  Loading...
+</div>
